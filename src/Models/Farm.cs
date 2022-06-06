@@ -26,10 +26,9 @@ namespace Trestlebridge.Models
                 case "Cow":
                     GrazingFields[index].AddResource((IGrazing)resource);
                     break;
-<<<<<<< Updated upstream
                 case "Chicken":
                     ChickenHouses[index].AddResource((Chicken)resource);
-=======
+                    break;
                 case "Goat":
                     GrazingFields[index].AddResource((IGrazing)resource);
                     break;
@@ -41,7 +40,6 @@ namespace Trestlebridge.Models
                     break;
                 case "Sheep":
                     GrazingFields[index].AddResource((IGrazing)resource);
->>>>>>> Stashed changes
                     break;
                 default:
                     break;
