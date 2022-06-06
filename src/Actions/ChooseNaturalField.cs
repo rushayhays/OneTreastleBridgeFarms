@@ -6,21 +6,21 @@ using Trestlebridge.Models.Animals;
 
 namespace Trestlebridge.Actions
 {
-    public class ChoosePlowedField
+    public class ChooseNaturalField
     {
         public static void CollectInput(Farm farm, ISeedProducing plant)
         {
             Utils.Clear();
 
-            for (int i = 0; i < farm.PlowedFields.Count; i++)
+            for (int i = 0; i < farm.NaturalFields.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Plowed Field");
+                Console.WriteLine($"{i + 1}. Natural Field");
             }
 
             Console.WriteLine();
 
-            // How can I output the type of plant chosen here?
-            Console.WriteLine($"Place the plant seeds where?");
+            // How can I output the type of animal chosen here?
+            Console.WriteLine($"Place the seeds where?");
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
@@ -29,13 +29,13 @@ namespace Trestlebridge.Actions
             Console.Write("Press enter to return to the main menu");
             Console.ReadLine();
 
-            farm.PlowedFields[choice-1].AddResource(plant);
+            farm.NaturalFields[choice-1].AddResource(plant);
 
             /*
                 Couldn't get this to work. Can you?
                 Stretch goal. Only if the app is fully functional.
              */
-            // farm.PurchaseResource<IPlowed>(animal, choice);
+            // farm.PurchaseResource<INatural>(animal, choice);
 
         }
     }

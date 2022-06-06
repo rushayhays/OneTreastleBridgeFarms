@@ -23,12 +23,19 @@ namespace Trestlebridge.Actions {
                     ChoosePlowedField.CollectInput(farm, new Sesame());
                     break;
                 case 2:
-                    //Needs choice of Plowed field or Natural Field
-                    //ChoosePlowedField.CollectInput(farm, new Sunflower());
+                Console.WriteLine(@"Sunflowers can be planeted in Natural Fields and in Plowed fields where would you like to plant these?
+                                    1. Natural Field
+                                    2. Plowed Field");
+                    string fieldChoice = Console.ReadLine ();
+                    if(Int32.Parse(fieldChoice) ==1){
+                        ChooseNaturalField.CollectInput(farm, new Sunflower());
+                    }else{
+                         ChoosePlowedField.CollectInput(farm, new Sunflower());
+                    }
+                    
                     break;
                 case 3:
-                    //Needs Choose Natural field
-                    //ChoosePlowedField.CollectInput(farm, new Wildflower());
+                    ChooseNaturalField.CollectInput(farm, new Wildflower());
                     break;
                 default:
                     break;
