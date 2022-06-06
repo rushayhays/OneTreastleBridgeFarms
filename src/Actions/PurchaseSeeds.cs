@@ -27,8 +27,7 @@ namespace Trestlebridge.Actions {
                     //ChoosePlowedField.CollectInput(farm, new Sunflower());
                     break;
                 case 3:
-                    //Needs Choose Natural field
-                    //ChoosePlowedField.CollectInput(farm, new Wildflower());
+                    ChooseNaturalField.CollectInput(farm, new Wildflower());
                     break;
                 default:
                     break;

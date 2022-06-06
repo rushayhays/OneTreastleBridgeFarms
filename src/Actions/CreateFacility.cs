@@ -26,17 +26,23 @@ namespace Trestlebridge.Actions
             switch (Int32.Parse(input))
             {
                 case 1:
+                    Console.WriteLine("Grazing Field successfully added to the farm");
+                    Console.Write("Press enter to return to the main menu");
+                    Console.ReadLine();
                     farm.AddGrazingField(new GrazingField());
                     break;
-                 case 2:
+                case 2:
                     Console.WriteLine("Plowed Field successfully added to the farm");
                     Console.Write("Press enter to return to the main menu");
                     Console.ReadLine();
                     farm.AddPlowedField(new PlowedField());
                     break;
-                // case 3:
-                //     farm.AddNaturalField(new NaturalField());
-                //     break;
+                case 3:
+                    Console.WriteLine("Natural Field successfully added to the farm");
+                    Console.Write("Press enter to return to the main menu");
+                    Console.ReadLine();
+                    farm.AddNaturalField(new NaturalField());
+                    break;
                 case 4:
                     Console.WriteLine("Chicken house successfully added to the farm");
                     Console.Write("Press enter to return to the main menu");
