@@ -28,7 +28,7 @@ namespace Trestlebridge.Actions
             }
             catch (HouseTooSmall)
             {
-                Console.WriteLine("That house was too small, please put your duck in a house with more room.");
+                Console.WriteLine("That house was too small, please house your duck in a duck house with more room.");
                 Console.ReadLine();
                 ChooseDuckHouse.CollectInput(farm, new Duck());
             }
