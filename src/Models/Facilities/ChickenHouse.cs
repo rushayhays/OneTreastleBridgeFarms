@@ -2,6 +2,7 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 using Trestlebridge.Models.Animals;
+using Trestlebridge.Actions;
 using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Facilities
@@ -23,8 +24,14 @@ namespace Trestlebridge.Models.Facilities
 
         public void AddResource(Chicken chicken)
         {
-            // TODO: implement this...
-            throw new NotImplementedException();
+            if (_animals.Count < Capacity)
+            {
+                _animals.Add(chicken);
+            }
+            else
+            {
+                throw new HouseTooSmall();
+            }
         }
 
         public void AddResource(List<Chicken> chickens)
