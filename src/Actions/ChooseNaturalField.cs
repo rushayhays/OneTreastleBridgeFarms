@@ -30,7 +30,7 @@ namespace Trestlebridge.Actions
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Plant seeds succesfully added to Plowed Field ({choice})");
+            Console.WriteLine($"Plant seeds succesfully added to Natural Field ({choice})");
             Console.Write("Press enter to return to the main menu");
             Console.ReadLine();
 
