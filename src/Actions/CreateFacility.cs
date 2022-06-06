@@ -20,9 +20,7 @@ namespace Trestlebridge.Actions {
                 case 1:
                     farm.AddGrazingField(new GrazingField());
                     break;
-                case 2:
-                    farm.AddPlowedField(new PlowedField());
-                    break;
+                
                 default:
                     break;
             }
