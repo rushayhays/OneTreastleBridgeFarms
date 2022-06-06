@@ -20,7 +20,7 @@ namespace Trestlebridge.Actions {
             switch (Int32.Parse(choice))
             {
                 case 1:
-                    //Sesame
+                    ChoosePlowedField.CollectInput(farm, new Sesame());
                     break;
                 case 2:
                     // Sunflower
