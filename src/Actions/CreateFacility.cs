@@ -33,7 +33,7 @@ namespace Trestlebridge.Actions
                     Console.Write("Press return to continue.");
                     Console.ReadLine();
                     farm.AddChickenHouse(new ChickenHouse());
-                    break;
+                    break;                
                 default:
                     break;
             }
