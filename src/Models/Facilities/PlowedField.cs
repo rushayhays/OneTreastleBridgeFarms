@@ -21,6 +21,11 @@ namespace Trestlebridge.Models.Facilities {
                 return _totalrows;
             }
         }
+        public double GetCurrentRowCount()
+        {
+            double rowCount = _allRows.Count;
+            return rowCount;
+        }
 
         public void AddResource (ISeedProducing plant)
         {

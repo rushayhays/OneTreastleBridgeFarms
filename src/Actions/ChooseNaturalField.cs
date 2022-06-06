@@ -12,20 +12,25 @@ namespace Trestlebridge.Actions
         {
             Utils.Clear();
 
+            
             for (int i = 0; i < farm.NaturalFields.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Natural Field");
+                if(farm.NaturalFields[i].GetCurrentRowCount() < farm.NaturalFields[i].Capacity)
+                {
+                    Console.WriteLine($"{i + 1}. Natural Field");
+                }
             }
+            
 
             Console.WriteLine();
 
-            // How can I output the type of animal chosen here?
+            // How can I output the type of plant chosen here?
             Console.WriteLine($"Place the seeds where?");
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Plant seeds succesfully added to Plowed Field ({choice})");
+            Console.WriteLine($"Plant seeds succesfully added to Natural Field ({choice})");
             Console.Write("Press enter to return to the main menu");
             Console.ReadLine();
 
