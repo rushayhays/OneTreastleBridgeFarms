@@ -29,8 +29,8 @@ namespace Trestlebridge.Actions
                     farm.AddGrazingField(new GrazingField());
                     break;
                 case 4:
-                    Console.WriteLine("Chicken house successfully added to the farm.");
-                    Console.Write("Press return to continue.");
+                    Console.WriteLine("Chicken house successfully added to the farm");
+                    Console.Write("Press enter to return to the main menu");
                     Console.ReadLine();
                     farm.AddChickenHouse(new ChickenHouse());
                     break;                
