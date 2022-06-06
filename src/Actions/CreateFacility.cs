@@ -51,6 +51,12 @@ namespace Trestlebridge.Actions
                     Console.ReadLine();
                     farm.AddChickenHouse(new ChickenHouse());
                     break;
+                case 5:
+                    Console.WriteLine("Duck house successfully added to the farm");
+                    Console.Write("Press enter to return to the main menu");
+                    Console.ReadLine();
+                    farm.AddDuckHouse(new DuckHouse());
+                    break;
                 default:
                     break;
             }
