@@ -25,7 +25,11 @@ namespace Trestlebridge.Actions
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
 
-            farm.NaturalFields[choice].AddResource(plant);
+            Console.WriteLine($"Plant seeds succesfully added to Plowed Field ({choice})");
+            Console.Write("Press enter to return to the main menu");
+            Console.ReadLine();
+
+            farm.NaturalFields[choice-1].AddResource(plant);
 
             /*
                 Couldn't get this to work. Can you?
