@@ -21,6 +21,7 @@ namespace Trestlebridge.Actions {
             {
                 case 1:
                     //Sesame
+                    //Farm.PurchaseResourse(SesameSeed)
                     break;
                 case 2:
                     // Sunflower
