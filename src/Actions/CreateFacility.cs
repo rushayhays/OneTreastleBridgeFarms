@@ -30,6 +30,8 @@ namespace Trestlebridge.Actions
                     Console.Write("Press enter to return to the main menu");
                     Console.ReadLine();
                     farm.AddGrazingField(new GrazingField());
+                    Console.WriteLine("Added a new grazing field to the facilty.");
+                    //Console.WriteLine("");
                     break;
                 case 2:
                     Console.WriteLine("Plowed Field successfully added to the farm");
@@ -48,7 +50,7 @@ namespace Trestlebridge.Actions
                     Console.Write("Press enter to return to the main menu");
                     Console.ReadLine();
                     farm.AddChickenHouse(new ChickenHouse());
-                    break;                
+                    break;
                 default:
                     break;
             }
