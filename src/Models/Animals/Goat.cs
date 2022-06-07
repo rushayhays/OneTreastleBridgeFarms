@@ -4,7 +4,7 @@ using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Animals
 {
-    public class Goat : IResource, IGrazing, ICompostProducing
+    public class Goat : IGrazing, ICompostProducing
     {
 
         private Guid _id = Guid.NewGuid();
