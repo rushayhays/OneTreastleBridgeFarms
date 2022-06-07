@@ -14,9 +14,9 @@ namespace Trestlebridge.Actions
 
             for (int i = 0; i < farm.PlowedFields.Count; i++)
             {
-                if(farm.PlowedFields[i].GetCurrentRowCount() < farm.PlowedFields[i].Capacity)
+                if (farm.PlowedFields[i].GetCurrentRowCount() < farm.PlowedFields[i].Capacity)
                 {
-                    Console.WriteLine($"{i + 1}. Plowed Field");
+                    Console.WriteLine($"{i + 1}. Plowed Field ({farm.PlowedFields[i].GetPlants()})");
                 }
             }
 
@@ -32,7 +32,8 @@ namespace Trestlebridge.Actions
             Console.Write("Press enter to return to the main menu");
             Console.ReadLine();
 
-            farm.PlowedFields[choice-1].AddResource(plant);
+            farm.PlowedFields[choice - 1].AddResource(plant);
+            farm.PlowedFields[choice - 1].GetPlants();
 
             /*
                 Couldn't get this to work. Can you?
