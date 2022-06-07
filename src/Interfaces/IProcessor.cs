@@ -5,12 +5,13 @@ using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Interfaces
 {
-    public interface IProcessor
+    public interface IProcessor<T>
     {
-        
-    
-        Dictionary<IResource, double> ProcessedResourcesDict{get; set;}
+        static List<IResource> ProcessedResources;
+        static void Process(T resource, int resourcenum)
+        {}
 
-        void Process();
+        static void Report()
+        {}
     }
 }
