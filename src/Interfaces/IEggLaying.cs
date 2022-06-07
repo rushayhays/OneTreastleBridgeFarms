@@ -1,6 +1,6 @@
 namespace Trestlebridge.Interfaces
 {
-    public interface IEggLaying
+    public interface IEggLaying : IResource
     {
         double CollectEggs ();
     }

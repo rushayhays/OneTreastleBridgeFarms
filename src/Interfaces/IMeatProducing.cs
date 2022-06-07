@@ -1,6 +1,6 @@
 namespace Trestlebridge.Interfaces
 {
-    public interface IMeatProducing
+    public interface IMeatProducing : IResource
     {
         double Butcher ();
     }
