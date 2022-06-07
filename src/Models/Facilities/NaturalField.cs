@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using System.Linq;
 using System.Collections.Generic;
 using Trestlebridge.Interfaces;
 
@@ -9,7 +10,6 @@ namespace Trestlebridge.Models.Facilities {
     {
 
         private List<List<ISeedProducing>> _allRows = new List<List<ISeedProducing>>();
-        //private List<ISeedProducing> _singleRow = new List<ISeedProducing>();
         private double _totalrows = 10;
         private int _plantsPerRow = 6;
         private Guid _id = Guid.NewGuid();
@@ -25,6 +25,16 @@ namespace Trestlebridge.Models.Facilities {
         {
             double rowCount = _allRows.Count;
             return rowCount;
+        }
+        public string GetPlants()
+        {
+            var values = _allRows.SelectMany(i => i)
+                .GroupBy(i => i.Type)
+                .Select(group => new {
+                    Type = group.Key,
+                    Count = group.Count()});
+
+            return String.Join(", ", values.Select(kvp => kvp.Count + " " + kvp.Type));
         }
 
         public void AddResource (ISeedProducing plant)
