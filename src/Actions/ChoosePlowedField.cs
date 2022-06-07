@@ -33,7 +33,6 @@ namespace Trestlebridge.Actions
             Console.ReadLine();
 
             farm.PlowedFields[choice - 1].AddResource(plant);
-            farm.PlowedFields[choice - 1].GetPlants();
 
             /*
                 Couldn't get this to work. Can you?

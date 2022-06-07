@@ -6,10 +6,10 @@ using Trestlebridge.Interfaces;
 
 
 namespace Trestlebridge.Models.Facilities {
-    public class NaturalField : IFacility<ISeedProducing>
+    public class NaturalField : IFacility<ICompostProducing>
     {
 
-        private List<List<ISeedProducing>> _allRows = new List<List<ISeedProducing>>();
+        private List<List<ICompostProducing>> _allRows = new List<List<ICompostProducing>>();
         private double _totalrows = 10;
         private int _plantsPerRow = 6;
         private Guid _id = Guid.NewGuid();
@@ -37,16 +37,16 @@ namespace Trestlebridge.Models.Facilities {
             return String.Join(", ", values.Select(kvp => kvp.Count + " " + kvp.Type));
         }
 
-        public void AddResource (ISeedProducing plant)
+        public void AddResource (ICompostProducing plant)
         {
-            List<ISeedProducing> singleRow = new List<ISeedProducing>
+            List<ICompostProducing> singleRow = new List<ICompostProducing>
             {
                 plant, plant, plant, plant, plant, plant
             };
             _allRows.Add(singleRow);
         }
 
-        public void AddResource (List<ISeedProducing> rowOfPlants) 
+        public void AddResource (List<ICompostProducing> rowOfPlants) 
         {
             // TODO: implement this...
             throw new NotImplementedException();
