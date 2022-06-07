@@ -8,19 +8,19 @@ namespace Trestlebridge.Models.Processors
     public class MeatProcessor: IProcessor
     {
         
-    
-        public Dictionary<string, int> ResourceDict = new Dictionary<string, int>(){};
+        public Dictionary<IResource, double> ProcessedResourcesDict = new Dictionary<IResource, double>(){};
 
-        public void AddToResourceDict(IMeatProducing meatType, int animalNum)
+        public void Process(IMeatProducing animal, int animalNum)
         {
-            //Does it pass in an animal object or just the name of the type?
             double totalMeat = 0;
             for(int x = 0; x < animalNum; x++)
             {
-                totalMeat += meatType.Butcher();
+                totalMeat += animal.Butcher();
             }
+            
 
         }
     }
 }
+
 
